@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Game Toolbox">
+		<meta name="author" content="np&sk">
+
+		<title>Infinity | Army Builder</title>
+		<link rel="stylesheet" href="./css/core.css">
+		<script type="text/javascript" src="./js/toolbox.js"></script>
+	</head>
+	
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1>Infinity Army Builder</h1>
+				<p>dynamic data selection</p>
+			</header>
+			
+			<!-- Div for Team Selectors - FAC/SEC + UNIT + PROFILE -->
+			<div id="teamselection">
+
+				<form name="profselector">
+					<table>
+						<thead>
+							<tr>
+								<th scope="cols" colspan="2">Team Selectors</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- ROW FOR FACTION SELECTION -->
+							<tr class="teamselector">
+								<td style="width: 228px">Faction</td>
+								<td>
+									<select name="faction" size="1" style="width: 230px" onchange="setOptions(document.profselector.faction.options[document.profselector.faction.selectedIndex].value, document.profselector.myunit);">
+										<option value=" " selected="selected">Select a Faction</option>
+										<option value="1">PanOceania</option>
+										<option value="2"> -- Military Orders</option>
+										<option value="3">Yu-Jing</option>
+									</select>
+								</td>
+							</tr>
+							<!-- ROW FOR UNIT SELECTION -->
+							<tr class="teamselector">
+								<td style="width: 228px">Unit</td>
+								<td>
+									<select name="myunit" size="1" style="width: 230px" onchange="setOptions(document.profselector.myunit.options[document.profselector.myunit.selectedIndex].value, document.profselector.myprofile);">
+										<option value=" " selected="selected">Select a Faction option first</option>
+									</select>
+								</td>
+							</tr>
+							<!-- ROW FOR PROFILE SELECTION -->
+							<tr class="teamselector">
+								<td style="width: 228px">Profile</td>
+								<td>
+									<select name="myprofile" size="1" style="width: 230px">
+										<!-- ON CHANGE STATEMENT GOES WITHIN ABOVE <SELECT> BLOCK TO UPDATE PROFILE VIEWER - BUT FIRST THE SCRIPT WOULD HAVE TO RETURN THE CORRECT VALUES! -->
+										<option value=" " selected="selected">Select a Unit option first</option>
+									</select>
+								</td>
+							</tr>
+							<!-- ROW FOR 'ADD' BUTTON -->
+							<tr class="teamselector">
+								<td colspan="2" align="right">
+									<input type="button" name="go" value="Add" onclick="alert(document.profselector.myprofile.options[document.profselector.myunit.selectedIndex].value);">
+								</td></tr>
+						</tbody>
+					</table>
+				</form>
+
+			</div><!-- end: teamselector -->
+		
+<!-- CODE BELOW THIS LINE IS UNECCESSARY UNTIL THE JAVASCRIPT ACTUALLY WORKS -->
+		
+<!--
+			<div id="teamselection">
+				<table id="stats">
+					<thead>
+						<tr>
+							<th scope="col" colspan="10">Profile Name</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td scope="col"><b>Mov</b></th>
+							<td scope="col"><b>CC</b></th>
+							<td scope="col"><b>BS</b></th>
+							<td scope="col"><b>PH</b></th>
+							<td scope="col"><b>WIP</b></th>
+							<td scope="col"><b>ARM</b></th>
+							<td scope="col"><b>BTS</b></th>
+							<td scope="col"><b>W</b></th>
+							<td scope="col"><b>S</b></th>
+							<td scope="col"><b>AVA</b></th>
+						</tr>
+						<tr>
+							<td class="statdisp" id="stat_mov">0</td>
+							<td class="statdisp" id="stat_cc">0</td>
+							<td class="statdisp" id="stat_bs">0</td>
+							<td class="statdisp" id="stat_ph">0</td>
+							<td class="statdisp" id="stat_wip">0</td>
+							<td class="statdisp" id="stat_arm">0</td>
+							<td class="statdisp" id="stat_bts">0</td>
+							<td class="statdisp" id="stat_w">0</td>
+							<td class="statdisp" id="stat_s">0</td>
+							<td class="statdisp" id="stat_ava">0</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+-->
+<!--			
+			<div id="teamselection">
+				<table id="profile">
+					<thead>
+						<tr>
+							<th scope="col">Name</th>
+							<th scope="col">BS Weapons</th>
+							<th scope="col">CC Weapons</th>
+							<th scope="col">SWC</th>
+							<th scope="col">C</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="statleft">Fusilier</td>
+							<td class="statleft">Combi Rifle</td>
+							<td class="statleft">Pistol, Knife</td>
+							<td class="statdisp">0</td>
+							<td class="statdisp">10</td>
+						</tr>
+						<tr>
+							<td class="statleft">Fusilier</td>
+							<td class="statleft">HMG</td>
+							<td class="statleft">Pistol, Knife</td>
+							<td class="statdisp">1</td>
+							<td class="statdisp">18</td>
+						</tr>
+						<tr>
+						<td colspan="5" align="right">
+									<input type="button" name="go" value="Remove" onclick="alert(document.profselector.myprofile.options[document.profselector.myunit.selectedIndex].value);">
+								</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+-->
+			
+		</div><!-- end: wrapper -->
+		
+	</body>
+	
+</html>
