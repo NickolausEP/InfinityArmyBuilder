@@ -1,0 +1,103 @@
+body {
+	line-height: 1;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font: 90%/160% Arial, Helvetica, sans-serif;
+	color: #666;
+	width: 90%;
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+a {
+	color: #69C;
+	text-decoration: none;
+}
+
+a: hover {
+	color: #F60;
+}
+
+h1 {
+	font-size: 1.7em;
+	color: #000;
+	line-height: 120%;
+	margin: 30px 0 10px;
+}
+
+img {
+	max-size: 100%;
+}
+
+.banner {
+	background: rgba(145,145,145,.2);
+	padding: 20px;
+	border-radius: 5px;
+}
+
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	color: #4a4a4d;
+	font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+th,
+td {
+	padding: 10px 15px;
+	vertical-align: middle;
+}
+
+thead {
+	background: #395870;
+	background: -webkit-linear-gradient(#49708f, #293f50);
+	background: -moz-linear-gradient(#49708f, #293f50);
+	background: linear-gradient(#49708f, #293f50);
+	color: #fff;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+th:first-child {
+	border-top-left-radius: 5px;
+	text-align: left;
+}
+
+th:last-child {
+	border-top-right-radius: 5px;
+}
+
+tbody tr:nth-child(even) {
+	background: #f0f0f2;
+}
+
+td {
+	border-bottom: 1px solid #c6c7cc;
+	border-right: 1px solid #c6c7cc;
+}
+
+td:first-child {
+	border-left: 1px solid #c6c7cc;
+}
+
+.text-offset {
+	color: #7c7c80;
+	font-size: 12px;
+}
+
+.statdisp {
+	text-align: center;
+}
+
+
+#teamselection {
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
